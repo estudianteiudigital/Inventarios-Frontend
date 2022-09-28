@@ -69,7 +69,7 @@ export const TipoUpdate = () => {
       Swal.showLoading();
       const { data } = await actualizarTipoEquipo(tipoEquipoId, tipo);
       Swal.fire({
-        title: "Tipo Equipo actualizad",
+        title: "Tipo Equipo actualizado",
         text: "El Tipo de Equipo se actualizó correctamente",
         icon: "success",
         confirmButtonText: "Aceptar",

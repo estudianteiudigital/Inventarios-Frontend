@@ -47,10 +47,10 @@ export const MarcaView = () => {
 
         {/* Cuerpo */}
         <tbody>
-          {marcas.map((marca) => {          
+          {marcas.map((marca, n) => {          
             return (              
               <tr key={marca._id}>                
-                <td>{marca.no}</td>
+                <th scope="row">{n + 1}</th>
                 <td>{marca.nombre}</td>
                 <td>{marca.estado} </td>
                 <td>{marca.fechaCreacion} </td>

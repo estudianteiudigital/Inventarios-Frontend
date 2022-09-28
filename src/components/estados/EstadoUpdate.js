@@ -43,7 +43,7 @@ export const EstadoUpdate = () => {
 
   useEffect(() => {
     setValoresForm({
-      name: estadoEquipo.name,
+      nombre: estadoEquipo.nombre,
       estado: estadoEquipo.estado,
     });
   }, [estadoEquipo]);
@@ -93,8 +93,6 @@ export const EstadoUpdate = () => {
     });
   }
 };
-
-
   return (
     <div className="container-fluid mt-3 mb-2">
       <div className="card">

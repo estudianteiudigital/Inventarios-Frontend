@@ -45,10 +45,10 @@ export const UsuarioView = () => {
           </tr>
         </thead>
         <tbody>
-          {usuarios.map((usuario) => {
+          {usuarios.map((usuario, n) => {
             return (
             <tr key={usuario._id}>
-              <th scope="row">#</th>
+              <th scope="row">{n + 1}</th>
               <td>{usuario.nombre}</td>
               <td>{usuario.email}</td>
               <td>{usuario.estado} </td>
