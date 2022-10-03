@@ -71,15 +71,15 @@
          Swal.showLoading();
          const { data } = await actualizarUsuario(usuarioId, usuario);
          Swal.fire({
-           title: "Usuario actualizado",
-           text: "El usuario se actualizó correctamente",
-           icon: "success",
-           confirmButtonText: "Aceptar",
-         }).then((result) => {
-           if (result.isConfirmed) {
-             window.location.href = "/usuarios";
-           }
-         });
+          title: "Usuario actualizado correctamente",
+          icon: "success",
+          showConfirmButton: true,
+          confirmButtonText: "Aceptar",
+      }).then((result) => {
+          if (result.isConfirmed) {                        
+              window.location.href = "/usuarios";
+          }
+      });
        } catch (e) {
          console.log(e);
          console.log(e.response.data);

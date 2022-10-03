@@ -69,15 +69,15 @@ export const TipoUpdate = () => {
       Swal.showLoading();
       const { data } = await actualizarTipoEquipo(tipoEquipoId, tipo);
       Swal.fire({
-        title: "Tipo Equipo actualizado",
-        text: "El Tipo de Equipo se actualizó correctamente",
+        title: "Tipo actualizada correctamente",
         icon: "success",
+        showConfirmButton: true,
         confirmButtonText: "Aceptar",
-      }).then((result) => {
-        if (result.isConfirmed) {
-          window.location.href = "/tipos";
+    }).then((result) => {
+        if (result.isConfirmed) {                        
+            window.location.href = "/Tipos";
         }
-      });
+    });
     } catch (e) {
       console.log(e);
       console.log(e.response.data);

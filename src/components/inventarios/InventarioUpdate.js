@@ -153,15 +153,15 @@ export const InventarioUpdate = () => {
       Swal.showLoading();
       const { data } = await editInventario(inventarioId, inventario);
       Swal.fire({
-        title: "Inventario actualizado",
-        text: "El inventario se actualizó correctamente",
+        title: "Inventario actualizado correctamente",
         icon: "success",
+        showConfirmButton: true,
         confirmButtonText: "Aceptar",
-      }).then((result) => {
-        if (result.isConfirmed) {
-          window.location.href = "/inventarios";
+    }).then((result) => {
+        if (result.isConfirmed) {                        
+            window.location.href = "/inventarios";
         }
-      });
+    });
     } catch (e) {
       console.log(e);
       console.log(e.response.data)

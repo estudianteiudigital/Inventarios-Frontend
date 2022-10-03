@@ -69,15 +69,15 @@ export const EstadoUpdate = () => {
     Swal.showLoading();      
     const { data } = await actualizarEstadoEquipo(estadoEquipoId, estadoEquipo);      
     Swal.fire({
-      title: "Estado equipo actualizado",
-      text: "El estado del equipo se actualizó correctamente",
+      title: "Estado actualizado correctamente",
       icon: "success",
+      showConfirmButton: true,
       confirmButtonText: "Aceptar",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        window.location.href = "/estados";
+  }).then((result) => {
+      if (result.isConfirmed) {                        
+          window.location.href = "/estados";
       }
-    });
+  });
   } catch (e) {      
     Swal.close();
     let mensaje;

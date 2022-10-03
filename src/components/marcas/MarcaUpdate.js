@@ -4,6 +4,7 @@ import { getMarcaPorId } from "../../services/marcaService";
 import { actualizarMarca } from "../../services/marcaService";
 import { getMarcas } from "../../services/marcaService";
 import Swal from "sweetalert2";
+import { Route } from "react-router-dom";
 
 export const MarcaUpdate = () => {
   const { marcaId = "" } = useParams();
@@ -72,15 +73,15 @@ export const MarcaUpdate = () => {
       Swal.showLoading();      
       const { data } = await actualizarMarca(marcaId, marca);      
       Swal.fire({
-        title: "Marca actualizada",
-        text: "La marca se actualizó correctamente",
+        title: "Marca actualizada correctamente",
         icon: "success",
+        showConfirmButton: true,
         confirmButtonText: "Aceptar",
-      }).then((result) => {
-        if (result.isConfirmed) {
-          window.location.href = "/marcas";
+    }).then((result) => {
+        if (result.isConfirmed) {                        
+            window.location.href = "/marcas";
         }
-      });
+    });
     } catch (e) {      
       Swal.close();
       let mensaje;
